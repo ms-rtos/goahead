@@ -40,6 +40,7 @@
 #define ME_CPU_SPARC       7           /**< Sparc */
 #define ME_CPU_TIDSP       8           /**< TI DSP */
 #define ME_CPU_SH          9           /**< SuperH */
+#define ME_CPU_CSKY       10           /**< C-SKY */
 
 /*
     Byte orderings
@@ -105,6 +106,11 @@
 #elif defined(__sh__)
     #define ME_CPU "sh"
     #define ME_CPU_ARCH ME_CPU_SH
+    #define CPU_ENDIAN ME_LITTLE_ENDIAN
+
+#elif defined(__csky__)
+    #define ME_CPU "csky"
+    #define ME_CPU_ARCH ME_CPU_CSKY
     #define CPU_ENDIAN ME_LITTLE_ENDIAN
 
 #else
